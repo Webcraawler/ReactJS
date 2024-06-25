@@ -112,3 +112,16 @@ function App() {
 }
 
 export default App
+
+
+
+
+
+
+
+//in this project mainly learnt how onclick actually works 
+//onclick takes a callback in which we define our useState function to change the variable 
+
+//we can define the function and just pass the ref in onclick(like we did in the counter function) or we can make arrow function directly in the onclick as we did in this project
+
+//also setColor or whatever useState function we make can take callback (we saw in the counter file)too or just arguments
