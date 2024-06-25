@@ -13,8 +13,24 @@ function App() {
   const addValue = ()=>{
     // console.log("clicked",Math.random().toFixed(2))
     // count = count+1;
-    if(count<20)setCount(count+1)
-    console.log("clicked ",count)
+
+    // if(count<20)setCount(count+1)
+    // if(count<20)setCount(count+1)
+    // if(count<20)setCount(count+1)
+    // if(count<20)setCount(count+1)
+      
+    //this is a interview ques now even tho we are calling it multiple time this all goes in as a batch as we studied in fibre since all the changes are made on the same var its goes as one
+
+    //but if you want to incement it like this you can take a prevCounter that takes the last value and that is updated first and goes to next line of code
+
+    //this func also take callback and using which we can take prev value and increment it first before moving ahead
+    setCount(prevCount => prevCount+1)
+    setCount(prevCount => prevCount+1)
+    setCount(prevCount => prevCount+1)
+    setCount(prevCount => prevCount+1)
+
+
+    
   }
 
   const remValue = ()=>{
