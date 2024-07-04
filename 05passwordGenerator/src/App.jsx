@@ -8,21 +8,21 @@ function App() {
 
   //useRef hook
   const passwordRef = useRef(null)
-  // const copyToClipboard = useCallback(()=>{
-  //   passwordRef.current?.select()
-  //   passwordRef.current?.setSelectionRange(8,12)
-  //   //?. is optional chaining without which it will work fine its is used in case an error occurs to takle that ?. chaining is used
-  //   window.navigator.clipboard.writeText(pass)
+  const copyToClipboard = useCallback(()=>{
+    passwordRef.current?.select()
+    passwordRef.current?.setSelectionRange(8,12)
+    //?. is optional chaining without which it will work fine its is used in case an error occurs to takle that ?. chaining is used
+    window.navigator.clipboard.writeText(pass)
     
-  // },[pass])
+  },[pass])
 
-  const copyToClipboard = useCallback(() => {
-    if (passwordRef.current) {
-      passwordRef.current.setSelectionRange(8, 12);
-      passwordRef.current.focus();
-      document.execCommand('copy');
-    }
-  }, [pass]);
+  // const copyToClipboard = useCallback(() => {
+  //   if (passwordRef.current) {
+  //     passwordRef.current.setSelectionRange(8, 12);
+  //     passwordRef.current.focus();
+  //     document.execCommand('copy');
+  //   }
+  // }, [pass]);
 
   //useCallback(fn,dependencies) -- this hook
   const passwordGenerator = useCallback(() => {
@@ -70,7 +70,7 @@ function App() {
           />
           <button 
           onClick={copyToClipboard}
-          className='outline-none flex bg-blue-700 text-white px-3 py-1 shrink-0'>Copy</button>
+          className='outline-none flex bg-blue-700 text-white px-3 py-1 shrink-0 focus:bg-purple-500 focus:text-black '>Copy</button>
 
         </div>
 
